@@ -40,8 +40,7 @@ class CueDesktopAmbientTrigger:
             })
 
         # 4. Unformatted tabular or JSON dump
-        if clipboard_text.strip().startswith("{") and clipboard_text.strip().endswith("}") and "
-" not in clipboard_text:
+        if clipboard_text.strip().startswith("{") and clipboard_text.strip().endswith("}") and "\n" not in clipboard_text:
             cues.append({
                 "type": "RAW_JSON_PAYLOAD",
                 "confidence": 0.88,
@@ -79,9 +78,7 @@ class CueDesktopAmbientTrigger:
         c1 = self.detect_contextual_cues(
             active_app="Cursor",
             window_title="server.ts - Backend API",
-            clipboard_text="Traceback (most recent call last):
-  File 'app.py', line 42, in <module>
-    KeyError: 'user_session_id'"
+            clipboard_text="Traceback (most recent call last):\n  File 'app.py', line 42, in <module>\n    KeyError: 'user_session_id'"
         )
 
         # Scenario 2: Logistics tracking code
