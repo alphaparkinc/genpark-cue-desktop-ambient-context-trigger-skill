@@ -1,0 +1,32 @@
+{
+  "name": "genpark-cue-desktop-ambient-context-trigger-skill",
+  "version": "1.0.0",
+  "description": "Ambient desktop context listener, screen text & clipboard change trigger, and non-intrusive proactive intent predictor (inspired by Cue).",
+  "category": "Service",
+  "author": "AlphaPark",
+  "tags": [
+    "personal-agent",
+    "cue-ai",
+    "ambient-listener",
+    "clipboard-trigger",
+    "mcp"
+  ],
+  "tools": [
+    {
+      "name": "ingest_ambient_signals",
+      "description": "Ingest passive desktop telemetry (active window, app, clipboard)."
+    },
+    {
+      "name": "detect_contextual_cues",
+      "description": "Analyze ambient signals and trigger proactive micro-suggestions."
+    },
+    {
+      "name": "formulate_proactive_suggestion",
+      "description": "Construct non-intrusive 1-click assistive payload."
+    },
+    {
+      "name": "run_cue_benchmark",
+      "description": "Run Cue desktop ambient trigger benchmark."
+    }
+  ]
+}
